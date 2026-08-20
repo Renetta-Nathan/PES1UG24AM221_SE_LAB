@@ -1,0 +1,36 @@
+@startuml
+
+left to right direction
+
+actor SysAdmin
+actor "Security Officer" as SecurityOfficer
+
+rectangle "Domain & SSL Certificate Expiry Alert System" {
+
+    usecase "Monitor Domains" as UC1
+    usecase "Perform WHOIS Audit" as UC2
+    usecase "Perform SSL/TLS Audit" as UC3
+    usecase "Check Expiration Threshold" as UC4
+    usecase "Generate Alert" as UC5
+    usecase "Escalate Alert" as UC6
+    usecase "View Audit Records" as UC7
+    usecase "Manage Monitored Domains" as UC8
+}
+
+SysAdmin --> UC1
+SysAdmin --> UC5
+SysAdmin --> UC6
+SysAdmin --> UC7
+SysAdmin --> UC8
+
+SecurityOfficer --> UC5
+SecurityOfficer --> UC6
+SecurityOfficer --> UC7
+
+UC1 --> UC2 : <<include>>
+UC1 --> UC3 : <<include>>
+UC2 --> UC4 : <<include>>
+UC3 --> UC4 : <<include>>
+UC5 --> UC6 : <<extend>>
+
+@enduml
