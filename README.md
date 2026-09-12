@@ -121,13 +121,3 @@ The architecture separates security responsibilities between services. Administr
 WHOIS and SSL/TLS audits can operate independently and potentially in parallel. This allows multiple domains to be monitored efficiently and reduces the time required to perform monitoring operations.
 
 ---
-
-## Lab 03 Deliverables
-
-The Lab 03 work includes:
-
-- UML Component Diagram
-- Architectural Selection and Justification
-- Lab Reflection
-- README Documentation
-
