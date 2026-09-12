@@ -131,17 +131,3 @@ The Lab 03 work includes:
 - Lab Reflection
 - README Documentation
 
-### Files
-
-```text
-Lab 03/
-│
-├── README.md
-│
-├── PES1UG24AM221_Lab3_Component_Diagram.pdf
-│
-├── PES1UG24AM221_Lab3_Component_Diagram.png
-│
-├── PES1UG24AM221_Lab3_Architecture_Justification.pdf
-│
-└── PES1UG24AM221_Lab3_Lab_Reflection.pdf
