@@ -1,101 +1,90 @@
-# Project: Real-Time Endless Runner Game
 
-This project is a terminal-based endless runner using **Pygame**. It introduces students to interactive game design using object-oriented principles and real-time graphical rendering.
+# Endless Runner
 
----
+A simple endless-runner game built with Python and Pygame. The player jumps over incoming obstacles, earns points by passing them, and can restart with a selected difficulty after a game over.
 
-## What’s Provided
+## Features
 
-A partially working version of an endless runner with:
+- Player jumping with gravity and ground collision.
+- Obstacles that move toward the player.
+- Collision detection and a maximum game speed to help prevent obstacles from skipping past the player between frames.
+- Score tracking when obstacles are successfully passed.
+- Game Over screen displaying the final score.
+- Replay options with Easy, Medium, and Hard difficulty levels, plus an Exit option.
+- Sound effects for jumping, scoring, and game over.
+- Separate Git commits for each lab task.
 
-- A player-controlled character that jumps over obstacles with gravity pulling it back down
-- Obstacles that spawn at a regular interval and scroll toward the player, gradually speeding up
-- Score display
+## Requirements
 
-You are expected to **analyze**, **interact with an AI assistant**, and **complete/fix** the game to make it fully functional.
+- Python 3
+- Pygame
 
-### **Use an LLM (e.g. ChatGPT or Claude) as your debugging and pair-programming partner for this lab.**
+## Setup
 
----
+1. Clone or download this repository.
+2. Open a terminal in the project root (the directory containing `main.py`).
+3. Install the required packages:
 
-## Getting Started
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
 
-### Setup
+   On Windows, you can also run:
 
-1. Clone the repo or download the project folder.
-2. Make sure you have Python 3.10+ installed.
-3. Install dependencies:
+   ```powershell
+   py -m pip install -r requirements.txt
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+## Run the Game
 
-4. Run the game:
+From the project root, run:
 
 ```bash
 python main.py
 ```
 
+On Windows, you can also use:
 
-
-
-## Tasks to Complete
-
-Each task must be completed using an iterative process involving LLM suggestions and your critical code review.
-
-### Task 1: Refine Collision Detection
-
-> The game speeds up forever with no limit, and once it's fast enough obstacles can zip past the player without the hit ever registering. Investigate and enhance collision accuracy (and/or the speed ramp) so it stays fair no matter how long a run lasts.
-
-
-### Task 2: Implement Game Over Condition
-
-> Add a screen that displays the final score once the player collides with an obstacle, then gracefully waits for input instead of just printing to the console.
-
-
-### Task 3: Add Replay Option
-
-> After Game Over, allow the user to play again by choosing a difficulty (Easy, Medium, or Hard starting speed/spawn rate), or exit.
-
-
-
-### Task 4: Add Sound Feedback
-
-> Add basic sound effects for jumping, passing an obstacle (scoring), and the game-over moment.
-
-
-
----
-
-## Expected Behavior
-
-- Player jumps with `Space`, `Up`, or `W`, and gravity brings it back down to the ground
-- Obstacles spawn at a regular interval and scroll from right to left, gradually getting faster
-- Score increases by one each time the player clears an obstacle
-- Game ends when the player collides with an obstacle
-
----
-
-## Folder Structure
-
+```powershell
+py main.py
 ```
-endless-runner-main/
+
+## Controls
+
+- **Jump:** `Space`, `Up Arrow`, or `W`
+- **Game Over menu:** Use the options and key instructions displayed in the game window to select a difficulty or exit.
+
+## Project Structure
+
+```text
+39_endless-runner/
 ├── main.py
 ├── requirements.txt
-├── game/
-│   ├── game_engine.py
-│   ├── player.py
-│   └── obstacle.py
-└── README.md
+└── game/
+    ├── game_engine.py
+    ├── obstacle.py
+    └── player.py
 ```
 
----
+Sound assets may be stored in the project's sound directory, depending on the implementation.
 
-## Submission Checklist
+## Gameplay
 
-Submission is only the following three things:
+Avoid obstacles by jumping over them. Each obstacle passed awards a point. If the player collides with an obstacle, the game ends and displays the final score. Choose a difficulty to start a new round, or select Exit to close the game.
 
-- [] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
-- [] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
-- [] The Chat/LLM used page link, with the complete chat history
+## Lab Deliverables
 
+For the VibeCoding lab submission, include:
+
+- A 10-second video recorded before changes.
+- A 10-second video recorded after all changes.
+- The updated source code.
+- An exported PDF or document containing the AI chat history.
+
+Keep a separate Git commit for each task, and push the finished work to your own GitHub repository. Do not open a pull request to the instructor's original repository.
+
+## Troubleshooting
+
+- If Pygame is missing, install dependencies using the setup commands above.
+- Run commands from the project root so `main.py` and the `game` package can be found.
+- If audio is unavailable, check that the sound files exist in the expected location and that your system's audio output is enabled.
