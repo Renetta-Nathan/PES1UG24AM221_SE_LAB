@@ -41,7 +41,6 @@ The lab also involved generating before-and-after analysis reports and maintaini
 
 * `vehicle_service.py` – Updated Python source code
 * `issues.md` – Documentation of identified issues and their fixes
-* `reflection.md` – Lab reflection
 * `pylint_report_before.txt` and `pylint_report_after.txt`
 * `bandit_report_before.txt` and `bandit_report_after.txt`
 * `flake8_report_before.txt` and `flake8_report_after.txt`
