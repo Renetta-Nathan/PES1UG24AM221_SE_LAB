@@ -4,13 +4,13 @@
 
 **SRN:** PES1UG24AM221
 
-This repository contains the work completed for the Software Engineering Laboratory based on the **Domain & SSL Certificate Expiry Alert System**.
+This repository contains the work completed for the Software Engineering Laboratory, including requirements engineering, Agile planning, architectural modelling, database design, and static code analysis.
 
 ---
 
 ## Lab 01 – Requirements Engineering & UML Use-Case Modelling
 
-This lab focused on requirements engineering and UML use-case modelling for the **Domain & SSL Certificate Expiry Alert System**. The requirements were identified and documented as functional and non-functional requirements, followed by identifying the system actors and use cases. A UML use-case diagram was created to represent the interactions between the **SysAdmin**, **Security Officer**, and the system. A detailed use-case flow was also documented for monitoring domain and SSL/TLS certificate expiration, including the main success scenario and an alternate flow for audit failure.
+This lab focused on identifying functional and non-functional requirements for the **Domain & SSL Certificate Expiry Alert System**. System actors, use cases, and UML use-case diagrams were created to represent system interactions and document the main and alternate use-case flows.
 
 ### Topics Covered
 
@@ -18,35 +18,29 @@ This lab focused on requirements engineering and UML use-case modelling for the 
 - Requirements Specification
 - Actors and Use Cases
 - UML Use-Case Diagrams
-- `<<include>>` and `<<extend>>` relationships
-- Main and Alternate Use-Case Flows
+- `<<include>>` and `<<extend>>` Relationships
+- Use-Case Flows
 
 ---
 
 ## Lab 02 – Agile Backlog Creation & Sprint Simulation
 
-This lab focused on applying Agile Scrum practices to the **Domain & SSL Certificate Expiry Alert System** using **Jira**. The requirements from Lab 01 were converted into Epics and User Stories and organized into a prioritized Product Backlog. Story Points were assigned using Fibonacci-based estimation, and the backlog was divided into two mock Scrum sprints. The progress of each sprint was simulated using the **To Do → In Progress → Done** workflow. Jira Burndown Charts were also generated to track the remaining work and sprint progress.
+This lab focused on applying **Agile Scrum practices using Jira**. Requirements were converted into Epics and User Stories, prioritized in a Product Backlog, estimated using Fibonacci-based Story Points, and organized into two mock sprints. Sprint progress was tracked using workflows and Burndown Charts.
 
 ### Topics Covered
 
-- Agile Scrum Methodology
-- Jira Project and Scrum Board
+- Agile Scrum and Jira
 - Epics and User Stories
-- Product Backlog Creation
+- Product Backlog and Prioritization
 - Story Point Estimation
-- Planning Poker
-- Backlog Prioritization and Ranking
-- Sprint Planning
-- Sprint Execution
-- To Do → In Progress → Done Workflow
-- Sprint Comments and Tracking
+- Sprint Planning and Execution
+- Workflow Management
 - Burndown Charts
-- Agile Sprint Reflection
 
 ### Sprint Summary
 
 | Sprint | Stories | Story Points | Status |
-|--------|---------|--------------|--------|
+|---|---:|---:|---|
 | Sprint 1 | 6 | 24 | Completed |
 | Sprint 2 | 4 | 18 | Completed |
 | **Total** | **10** | **42** | **Completed** |
@@ -55,69 +49,55 @@ This lab focused on applying Agile Scrum practices to the **Domain & SSL Certifi
 
 ## Lab 03 – Component Modelling & Architectural Pattern Selection
 
-### Summary
-
-This lab focused on evaluating architectural styles and selecting the most appropriate architecture for the **Domain & SSL Certificate Expiry Alert System**. **Layered, Microservices, and Client-Server architectures** were compared based on their advantages and disadvantages.
-
-**Microservices Architecture** was selected because the system contains independent functions such as WHOIS auditing, SSL/TLS auditing, expiry detection, and alert management. These functions can be separated into independent services, allowing the system to achieve better modularity, scalability, and fault isolation.
-
-A UML component diagram was created to represent the major components, interfaces, dependencies, and data flow within the system. The major components identified were the **Web Application (Admin Portal), Domain Monitoring Manager, WHOIS Audit Service, SSL/TLS Audit Service, Expiry Detection & Alert Service, and Audit Database**.
+This lab focused on comparing Layered, Microservices, and Client-Server architectures for the **Domain & SSL Certificate Expiry Alert System**. Microservices Architecture was selected to support modularity, independent monitoring services, scalability, and fault isolation. A UML component diagram was created to represent the system's components, interfaces, and dependencies.
 
 ### Topics Covered
 
 - Architectural Style Evaluation
-- Layered Architecture
 - Microservices Architecture
-- Client-Server Architecture
-- Architectural Pattern Selection
-- UML Component Modelling
-- UML Components and Interfaces
-- Provided and Required Interfaces
-- Component Dependencies
-- Data Flow and Component Interactions
-- Security Considerations
-- Performance Considerations
-- Architectural Documentation
-- Component Diagram Creation
+- UML Component Diagrams
+- Components and Interfaces
+- Dependencies and Data Flow
+- Security and Performance Considerations
 
-### Selected Architecture
+---
 
-**Microservices Architecture**
+## Lab 04 – Database Design and Implementation
 
-The Microservices Architecture was selected because:
+This lab focused on designing and implementing a database by identifying entities, attributes, relationships, and constraints. An ER diagram was developed to represent the data model, followed by relational database design and implementation using tables, keys, and SQL queries.
 
-1. **Independent Monitoring Services**  
-   WHOIS auditing and SSL/TLS certificate auditing can operate as independent services without tightly coupling their implementation.
+### Topics Covered
 
-2. **Scalability and Fault Isolation**  
-   Individual services can be scaled according to their workload, and a failure in one monitoring service does not necessarily stop the other services from operating.
+- Database Requirements
+- Entity-Relationship Modelling
+- ER Diagrams
+- Relational Database Design
+- Primary and Foreign Keys
+- SQL Table Creation and Queries
+- Data Integrity and Constraints
 
-### Main Components
+---
 
-| Component | Responsibility |
-|-----------|----------------|
-| Web Application (Admin Portal) | Provides the administrative interface for managing domains and viewing alerts |
-| Domain Monitoring Manager | Coordinates domain monitoring and audit activities |
-| WHOIS Audit Service | Performs WHOIS audits and retrieves domain expiry information |
-| SSL/TLS Audit Service | Checks SSL/TLS certificates and retrieves certificate expiry information |
-| Expiry Detection & Alert Service | Analyses audit results, checks expiry thresholds, and generates alerts |
-| Audit Database | Stores domain data, audit records, alerts, and audit history |
+## Lab 05 – Static Code Analysis
 
-### Main Interfaces
+This lab focused on improving the quality, security, and maintainability of the **Vehicle Service Management System** Python program. Pylint, Bandit, and Flake8 were used to identify code-quality issues, potentially insecure coding practices, and formatting violations. Corrections were made and verified through before-and-after reports.
 
-| Interface | Purpose |
-|-----------|---------|
-| Domain Management API | Connects the Web Application with the Domain Monitoring Manager |
-| WHOIS Audit API | Connects the Domain Monitoring Manager with the WHOIS Audit Service |
-| SSL/TLS Audit API | Connects the Domain Monitoring Manager with the SSL/TLS Audit Service |
-| Alert API | Connects the Expiry Detection & Alert Service with the Web Application |
+### Topics Covered
 
-### Security Consideration
+- Static Code Analysis
+- Pylint Code Quality Checks
+- Bandit Security Analysis
+- Flake8 Style Checks
+- Code Refactoring and Issue Documentation
+- Before-and-After Reports
+- Git Version Control and Commits
 
-The architecture separates security responsibilities between services. Administrative access can be protected using authenticated HTTPS communication, while domain and audit information can be isolated within the appropriate services and database.
+### Analysis Summary
 
-### Performance Consideration
-
-WHOIS and SSL/TLS audits can operate independently and potentially in parallel. This allows multiple domains to be monitored efficiently and reduces the time required to perform monitoring operations.
+| Tool | Purpose | Final Result |
+|---|---|---|
+| Pylint | Code quality | 10.00/10 |
+| Bandit | Security analysis | No issues identified |
+| Flake8 | Code style and formatting | To be verified |
 
 ---
