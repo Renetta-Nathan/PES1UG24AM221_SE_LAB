@@ -101,3 +101,14 @@ This lab focused on improving the quality, security, and maintainability of the 
 | Flake8 | Code style and formatting | To be verified |
 
 ---
+### Lab 6 – Code and Branch Coverage Analysis
+
+This lab focused on analysing code coverage and branch coverage for a Password Policy Checker application using Python's `pytest` and `coverage.py` tools. Test cases were developed to cover password length validation, common passwords, character-type requirements, password strength evaluation, and password fix suggestions. Separate test suites were created for code coverage and branch coverage, achieving 100% code coverage and evaluating branch coverage against the required 90% target.
+
+**Topics Covered:**
+- Code Coverage Analysis
+- Branch Coverage Analysis
+- Automated Testing using Pytest
+- Coverage Measurement using Coverage.py
+- Test Case Design and Execution
+- Testing Conditional Statements and Branches
