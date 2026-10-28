@@ -35,7 +35,7 @@ The lab also involved generating before-and-after analysis reports and maintaini
 |---|---|---|
 | Pylint | Code quality and programming practices | Final score: 10.00/10 |
 | Bandit | Security vulnerability analysis | No issues identified in the final scan |
-| Flake8 | Python style and formatting checks | Refer to the final report |
+| Flake8 | Python style and formatting checks | No issues identified in the final scan |
 
 ### Deliverables
 
