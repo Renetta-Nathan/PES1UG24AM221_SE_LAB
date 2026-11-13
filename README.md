@@ -4,7 +4,7 @@
 
 **SRN:** PES1UG24AM221
 
-This repository contains the work completed for the Software Engineering Laboratory, including requirements engineering, Agile planning, architectural modelling, database design, and static code analysis.
+This repository contains the work completed for the Software Engineering Laboratory, including requirements engineering, Agile planning, architectural modelling, database design, static code analysis, code coverage analysis, and fuzz testing.
 
 ---
 
@@ -101,14 +101,43 @@ This lab focused on improving the quality, security, and maintainability of the 
 | Flake8 | Code style and formatting | To be verified |
 
 ---
-### Lab 6 – Code and Branch Coverage Analysis
+
+## Lab 6 – Code and Branch Coverage Analysis
 
 This lab focused on analysing code coverage and branch coverage for a Password Policy Checker application using Python's `pytest` and `coverage.py` tools. Test cases were developed to cover password length validation, common passwords, character-type requirements, password strength evaluation, and password fix suggestions. Separate test suites were created for code coverage and branch coverage, achieving 100% code coverage and evaluating branch coverage against the required 90% target.
 
-**Topics Covered:**
+### Topics Covered
+
 - Code Coverage Analysis
 - Branch Coverage Analysis
 - Automated Testing using Pytest
 - Coverage Measurement using Coverage.py
 - Test Case Design and Execution
 - Testing Conditional Statements and Branches
+
+---
+
+## Lab 7 – Fuzz Testing for Input Validation Bugs
+
+This lab focused on applying **property-based fuzz testing using the Hypothesis library** to identify and fix input validation bugs in a Password Policy Checker application. Hypothesis was used to automatically generate a variety of inputs, including empty strings, unexpected values, and `None`, to test the robustness of the application's three functions. The bugs identified during testing were fixed using defensive programming techniques, and the updated application was verified by rerunning the test suite using Pytest, with all three tests passing.
+
+### Topics Covered
+
+- Fuzz Testing and Property-Based Testing
+- Hypothesis Testing Library
+- Automated Testing using Pytest
+- Input Validation and Edge-Case Detection
+- Testing Empty and Invalid Inputs
+- Exception Handling and Defensive Programming
+- Debugging and Fixing Application Bugs
+- Before-and-After Test Results
+
+### Testing Summary
+
+| Function | Purpose | Final Result |
+|---|---|---|
+| `first_character_type()` | Classifies the first password character | Passed |
+| `split_credentials()` | Splits username and password | Passed |
+| `digit_ratio()` | Calculates the ratio of digits in a password | Passed |
+| **Total** | **Hypothesis fuzz tests** | **3 Passed** |
+
